@@ -27,6 +27,7 @@ export default class PluginState {
   public hasWrong: boolean
   private curInput: string
   public chapterCycleMode: boolean
+  public autoCaptureMode: boolean
 
   public voiceLock: boolean
   public translationVisible: boolean
@@ -60,6 +61,8 @@ export default class PluginState {
     this.readOnlyIntervalId = null
     this.placeholder = getConfig('placeholder') // 用于控制word不可见时，inputBar中是否出现占位符及样式
     this.chapterCycleMode = false
+
+    this.autoCaptureMode = false
 
     this._wordVisibility = globalState.get('wordVisibility', true)
 
